@@ -67,10 +67,11 @@ void TESTBENCH::sink(){
     cout << "y_downsample_by2 = " << endl;
     for (int i = 0; i < 64; i++){
         _r = r.read();
-        cout <<  i <<": " << _r << endl;
+        //cout <<  i <<": ";
+        printf("%.3f, ", (double)_r);
         wait();
     }
-    cout << "total cycles: " ;
+    cout << "\ntotal cycles: " ;
     cout << sc_time_stamp() <<  "/1ns" <<endl ;
     sc_stop();
 }
